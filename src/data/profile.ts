@@ -1,4 +1,4 @@
-// import portraitImage from "@/assets/w-portrait.png"
+import portraitImage from "/w-portrait.png"
 
 export const profile = {
   name: "Jane Doe",
@@ -14,7 +14,7 @@ export const profile = {
   socialLinks: {
     linkedin: "https://linkedin.com/in/...",
   },
-  portraitImage: "../../public/w-portrait.png",
+  portraitImage,
   experiences: [
     {
       id: "exp-1",
