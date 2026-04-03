@@ -2,7 +2,7 @@
      "about": {
     "hero": {
       "eyebrow": "À propos",
-      "title": "Un parcours entre qualité, management et conduite de projets."
+      "title": "Une carrière centrée sur la qualité et le leadership."
     },
     "biography": {
       "eyebrow": "Biographie",
@@ -18,7 +18,7 @@
     },
     "seo": {
       "title": "À propos | Portfolio",
-      "description": "Découvrez le parcours, l'expérience et la formation d'un Quality Assurance & Project Leader."
+      "description": "Découvrez l'expérience et la formation d'un Quality Assurance & Project Leader."
     }
   },
   "common": {
@@ -38,11 +38,11 @@
    "contact": {
     "hero": {
       "eyebrow": "Contact",
-      "title": "Échangeons autour de vos projets et enjeux qualité.",
+      "title": "Parlez nous de votre projet.",
       "description": "Pour une opportunité, une mission, une collaboration ou une prise de contact, vous pouvez utiliser le formulaire ci-dessous ou mes coordonnées directes."
     },
     "form": {
-      "eyebrow": "Formulaire",
+      "eyebrow": "Remplissez le formulaire ci-dessous",
       "title": "Entrer en contact",
       "name": "Nom",
       "namePlaceholder": "Votre nom",
@@ -136,15 +136,15 @@
   "resume": {
     "experience": {
       "eyebrow": "Expérience",
-      "title": "Un parcours orienté qualité, pilotage et excellence industrielle."
+      "title": "Une carrière centrée sur la qualité et le leadership."
     },
     "skills": {
-      "eyebrow": "Compétences",
-      "title": "Expertise métier et outils de pilotage."
+      "eyebrow": "Expertise métier et outils de pilotage",
+      "title": "Compétences"
     },
     "certifications": {
-      "eyebrow": "Certifications",
-      "title": "Référentiels, méthodes et reconnaissance professionnelle."
+      "eyebrow": "Référentiels, méthodes et reconnaissance professionnelle",
+      "title": "Certifications"
     }
   },
     "theme": {
