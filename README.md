@@ -1,50 +1,114 @@
-# React + TypeScript + Vite
+# Portfolio CV – QA & Project Leader
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Single-page portfolio and CV.  
+Minimalist, editorial design with smooth animations and responsive layout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18 + TypeScript
+- Vite 5
+- Tailwind CSS v4 + shadcn/ui
+- Framer Motion
+- React Router DOM v6
+- Lucide React
+- next-themes
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Pages
+
+### / (Home)
+
+- Full-screen hero
+- Experience summary
+- Skills and certifications
+
+### /about
+
+- Biography
+- Experience timeline
+- Education timeline
+
+### /contact
+
+- Contact form
+- Contact information
+
+### \*
+
+- 404 page
+
+---
+
+## Architecture
+
+- Component-based structure
+- Single data source:  
+  `src/data/profile.ts`
+- Content-driven UI (no hardcoded data in components)
+
+---
+
+## Internationalization
+
+- Language switch: English / French
+- JSON-based translations:  
+   `src/locales/fr.json`  
+   `src/locales/en.json`
+- Global language context (React Context)
+- All UI text is translation-driven
+- Easily extendable to additional languages with minimal changes due to the JSON structure
+
+---
+
+## Design System
+
+- CSS variables (HSL)
+
+### Semantic tokens
+
+- `--background`
+- `--foreground`
+- `--primary`
+- `--muted`
+- `--accent`
+- `--border`
+
+- Light / dark mode
+- Minimal typography and spacing
+
+---
+
+## Features
+
+- Code-splitting (React.lazy + Suspense)
+- Page transitions (Framer Motion)
+- Scroll-reveal animations
+- Responsive layout
+- Scroll-aware header
+- SEO per page
+- Error boundary
+
+---
+
+## Setup
+
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Build
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run build
+npm run preview
 ```
+
+## Assets
+
+- Portrait image (PNG, ~500x500)

@@ -1,0 +1,158 @@
+{
+  "about": {
+    "hero": {
+      "eyebrow": "About",
+      "title": "A career built around quality, leadership and project delivery."
+    },
+    "biography": {
+      "eyebrow": "Biography",
+      "linkedin": "View LinkedIn"
+    },
+    "experience": {
+      "eyebrow": "Experience",
+      "title": "Professional experience"
+    },
+    "education": {
+      "eyebrow": "Education",
+      "title": "Academic background"
+    },
+
+      "seo": {
+        "title": "About | Portfolio",
+        "description": "Discover the background, experience and education of a Quality Assurance & Project Leader."
+      }
+
+  },
+  "common": {
+    "skipLink": {
+      "label": "Skip to content",
+      "description": "A link to skip navigation elements and go directly to the main content."
+    },
+    "errorBoundary": {
+      "fallback": {
+        "title": "An error occurred",
+        "message": "Something went wrong.",
+        "button": "Try again"
+      }
+    },
+    "loading": "Loading..."
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let’s discuss your projects and quality challenges.",
+      "description": "For an opportunity, an assignment, a collaboration or a first contact, you can use the form below or reach me directly."
+    },
+    "form": {
+      "eyebrow": "Form",
+      "title": "Get in touch",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "projectType": "Project type",
+      "projectTypePlaceholder": "Select a topic",
+      "message": "Message",
+      "messagePlaceholder": "Describe your need, context or request.",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "errors": {
+        "nameRequired": "Name is required.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Email address is invalid.",
+        "projectTypeRequired": "Please select a project type.",
+        "messageRequired": "Message is required.",
+        "generic": "An error occurred while submitting the form."
+      },
+      "options": {
+        "quality": "Quality",
+        "projectManagement": "Project management",
+        "consulting": "Consulting",
+        "other": "Other"
+      }
+    },
+    "cards": {
+      "email": {
+        "title": "Email"
+      },
+      "phone": {
+        "title": "Phone"
+      },
+      "location": {
+        "title": "Location"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "View profile"
+      }
+    },
+    "availability": {
+      "label": "Availability"
+    },
+    "seo": {
+      "title": "Contact | Portfolio",
+      "description": "Get in touch for an opportunity, an assignment or a collaboration."
+    }
+
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "linkedin": "LinkedIn profile"
+  },
+  "header": {
+   "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "mobileMenu": {
+      "open": "Open menu"
+    },
+    "language": {
+      "label": "Language"
+    },
+    "theme": {
+      "label": "Theme"
+    }
+  },
+  "home": {
+    "hero": {
+      "ctaAbout": "View résumé",
+      "ctaContact": "Contact"
+    },
+    "seo": {
+      "title": "Home | Portfolio",
+      "description": "Professional portfolio focused on quality, leadership and project delivery in the automotive industry."
+    },
+    "scroll": "Scroll"
+  },
+    "notFound": {
+    "seo": {
+      "title": "Page not found | Portfolio",
+      "description": "The requested page could not be found."
+    },
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or is no longer available.",
+    "cta": "Back to home"
+  },
+  "resume": {
+    "experience": {
+      "eyebrow": "Experience",
+      "title": "A career focused on quality, leadership, and industrial excellence."
+    },
+    "skills": {
+      "eyebrow": "Skills",
+      "title": "Business expertise and performance management tools."
+    },
+    "certifications": {
+      "eyebrow": "Certifications",
+      "title": "Standards, methods, and professional recognition."
+    }
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}

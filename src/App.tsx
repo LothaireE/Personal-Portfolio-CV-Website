@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Suspense, lazy } from "react"
+import { Navigate, Route, Routes, useLocation } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
+import Header from "@/components/layout/Header"
+import Footer from "@/components/layout/Footer"
+import { SkipLink } from "@/components/common/SkipLink"
+import { useLanguageContext } from "./context/appContext"
 
-function App() {
-  const [count, setCount] = useState(0)
+const HomePage = lazy(() => import("@/pages/home-page"))
+const AboutPage = lazy(() => import("@/pages/about-page"))
+const ContactPage = lazy(() => import("@/pages/contact-page"))
+const NotFoundPage = lazy(() => import("@/pages/not-found-page"))
 
+function PageLoader() {
+    const { t } = useLanguageContext()
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <main className="flex min-h-screen items-center justify-center bg-background px-6 text-foreground">
+      <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground">
+        {t("common.loading")}
       </p>
-    </>
+    </main>
   )
 }
 
-export default App
+export default function App() {
+
+  const location = useLocation()
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <SkipLink />
+      <Header />
+
+      <div className="flex min-h-screen flex-col">
+        <div className="flex-1">
+          <Suspense fallback={<PageLoader />}>
+            <AnimatePresence 
+                mode="wait"
+                initial={true}
+              >
+              <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/404" element={<NotFoundPage />} />
+                <Route path="*" element={<Navigate to="/404" replace />} />
+              </Routes>
+            </AnimatePresence>
+          </Suspense>
+        </div>
+
+        <Footer />
+      </div>
+    </div>
+  )
+}
