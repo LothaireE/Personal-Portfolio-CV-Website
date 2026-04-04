@@ -1,29 +1,29 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import { BrowserRouter } from "react-router-dom"
-
+import { StrictMode } from "react"
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import "@/index.oklch.css"
 import App from "@/App"
-import "@/index.css"
-// import "@/index.oklch.css"
-
 import { ThemeProvider } from "@/components/common/ThemeProvider"
 import { ErrorBoundary } from "@/components/common/ErrorBoundary"
-import { LanguageProvider } from "./context/provider/LanguageProvider"
+import { LanguageProvider } from "./context/LanguageContext"
+import { ProfileProvider } from "./context/ProfileContext";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ErrorBoundary>
+
+const router = createBrowserRouter([
+  { path: "/*", element: <App /> },
+]);
+
+
+createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+     <ErrorBoundary>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <LanguageProvider>
-          <BrowserRouter
-            future={{
-              v7_relativeSplatPath: true,
-            }}
-          >
-            <App />
-          </BrowserRouter>
-        </LanguageProvider>
-      </ThemeProvider>
+          <LanguageProvider>
+             <ProfileProvider>
+                <RouterProvider router={router} />
+             </ProfileProvider>
+          </LanguageProvider>
+        </ThemeProvider>
     </ErrorBoundary>
-  </React.StrictMode>
-)
+    </StrictMode>,
+);

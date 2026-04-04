@@ -1,14 +1,14 @@
 import { motion } from "framer-motion"
-import { profile } from "@/data/profile"
 import { useLanguageContext } from "@/context/appContext"
 import { fadeUp } from "@/lib/animations";
+import { ExperienceProps } from "@/types/types";
 
 
 
 const ExperienceTimeline = ({
     experiences
 } : {
-    experiences: typeof profile.experiences
+    experiences: ExperienceProps[]
 }) => {
     const { t } = useLanguageContext()
 

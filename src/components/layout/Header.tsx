@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
-import { Link, NavLink, useLocation } from "react-router-dom"
-import ThemeToggle from "@/components/layout/ThemeToggle"
-import { LanguageToggle } from "@/components/common/LanguageToggle"
+import { Link, NavLink, useLocation } from "react-router"
+import {ThemeToggle} from "@/components/header/ThemeToggle"
+import { LanguageToggle } from "@/components/header/LanguageToggle"
 import { MobileNav } from "@/components/layout/MobileNav"
-import { profile } from "@/data/profile"
-import { useLanguageContext } from "@/context/appContext"
+import { useLanguageContext, useProfileContext } from "@/context/appContext"
 
 function navLinkClassName({ isActive }: { isActive: boolean }) {
   return [
@@ -16,6 +15,7 @@ function navLinkClassName({ isActive }: { isActive: boolean }) {
 export default function Header() {
   const location = useLocation()
   const { t } = useLanguageContext()
+  const { profile } = useProfileContext()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 

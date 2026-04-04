@@ -1,6 +1,6 @@
 
 import { useEffect } from "react"
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink, useLocation } from "react-router"
 import { Menu } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -11,10 +11,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import ThemeToggle from "@/components/layout/ThemeToggle"
-import { LanguageToggle } from "@/components/common/LanguageToggle"
-import { profile } from "@/data/profile"
-import { useLanguageContext } from "@/context/appContext"
+import { ThemeToggle } from "@/components/header/ThemeToggle"
+import { LanguageToggle } from "@/components/header/LanguageToggle"
+import { useLanguageContext, useProfileContext } from "@/context/appContext"
 
 interface MobileNavProps {
   isOpen: boolean
@@ -35,6 +34,7 @@ export function MobileNav({
   isTransparent = false,
 }: MobileNavProps) {
   const location = useLocation()
+  const { profile } = useProfileContext()
   const { t } = useLanguageContext()
 
   useEffect(() => {
@@ -90,7 +90,7 @@ export function MobileNav({
                   {t("header.theme.label")}
                 </p>
                 {/* <ThemeToggle /> */}
-                <ThemeToggle variant="group" />
+                <ThemeToggle  />
               </div>
             </div>
           </div>

@@ -1,10 +1,10 @@
 import { Suspense, lazy } from "react"
-import { Navigate, Route, Routes, useLocation } from "react-router-dom"
+import { Navigate, Route, Routes, useLocation } from "react-router"
 import { AnimatePresence } from "framer-motion"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { SkipLink } from "@/components/common/SkipLink"
-import { useLanguageContext } from "./context/appContext"
+// import { useLanguageContext } from "./context/appContext"
 
 const HomePage = lazy(() => import("@/pages/home-page"))
 const AboutPage = lazy(() => import("@/pages/about-page"))
@@ -12,11 +12,11 @@ const ContactPage = lazy(() => import("@/pages/contact-page"))
 const NotFoundPage = lazy(() => import("@/pages/not-found-page"))
 
 function PageLoader() {
-    const { t } = useLanguageContext()
+    // const { t } = useLanguageContext()
   return (
     <main className="flex min-h-screen items-center justify-center bg-background px-6 text-foreground">
       <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground">
-        {t("common.loading")}
+        {/* {t("common.loading")} */}
       </p>
     </main>
   )

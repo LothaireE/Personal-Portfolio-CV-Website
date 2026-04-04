@@ -1,7 +1,7 @@
+import { createContext } from "react";
 import React, { useEffect, useMemo, useState } from "react"
 import en from "@/locales/en.json"
 import fr from "@/locales/fr.json"
-import LanguageContext from "../useLanguageContext"
 
 type Locale = "fr" | "en"
 
@@ -47,4 +47,21 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     </LanguageContext.Provider>
   )
 }
+
+
+interface LanguageContextValue {
+  locale: Locale
+  setLocale: (locale: Locale) => void
+  toggleLocale: () => void
+  t: (path: string) => string
+}
+
+const LanguageContext = createContext<LanguageContextValue >({
+    locale: "en",
+    setLocale: () => {},
+    toggleLocale: () => {},
+    t: (path: string) => path,
+})
+
+export default LanguageContext
 
