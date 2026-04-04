@@ -21,14 +21,14 @@ export function HeaderToggleButton<T extends string>({
   onChange,
 }: HeaderToggleButtonProps<T>) {
   const containerClass = [
-    "inline-flex items-center rounded-full border p-1 transition-colors",
+    "inline-flex items-center rounded-full border p-[2px] transition-colors",
     isTransparent
       ? "border-black/10 bg-white/10 text-foreground backdrop-blur-sm dark:border-white/10 dark:bg-white/5"
       : "border-border bg-background/80 text-foreground backdrop-blur-sm",
   ].join(" ")
 
   const itemClass = [
-    "rounded-full px-3 py-2 text-sm uppercase tracking-[0.16em] transition-all",
+    "rounded-full px-2 py-1 text-xs uppercase tracking-[0.14em] transition-all",
     "text-muted-foreground hover:text-foreground",
   ].join(" ")
 

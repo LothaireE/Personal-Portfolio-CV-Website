@@ -41,15 +41,17 @@ export default function Header() {
           : "border-b border-border bg-background/90 text-foreground backdrop-blur-md",
       ].join(" ")}
     >
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 lg:px-8">
-        <Link
-          to="/"
-          className="text-xs uppercase tracking-[0.35em] transition-opacity hover:opacity-80"
-        >
-          {profile.name}
-        </Link>
+      <div className="mx-auto relative flex h-20 max-w-6xl items-center px-6 lg:px-8">
+        <div className="flex items-center">
+          <Link
+            to="/"
+            className="text-xs uppercase tracking-[0.35em] transition-opacity hover:opacity-80"
+          >
+            {profile.name}
+          </Link>
+        </div>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="absolute left-1/2 -translate-x-1/2 hidden items-center gap-8 md:flex">
           <NavLink to="/" className={navLinkClassName}>
             {t("header.nav.home")}
           </NavLink>
@@ -61,12 +63,13 @@ export default function Header() {
           </NavLink>
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="ml-auto hidden items-center gap-2 md:flex">
           <LanguageToggle isTransparent={isTransparent} />
           <ThemeToggle isTransparent={isTransparent} />
         </div>
 
-        <div className="md:hidden">
+        {/* MOBILE */}
+        <div className="ml-auto md:hidden">
           <MobileNav
             isOpen={isOpen}
             onOpenChange={setIsOpen}
