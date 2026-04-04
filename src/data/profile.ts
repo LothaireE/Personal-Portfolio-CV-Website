@@ -1,6 +1,6 @@
 import portraitImage from "/w-portrait.png"
 
-export const profile = {
+export const profileData = {
   name: "Jane Doe",
   tagline: "Engineer · Manager · Project Engineer",
   heroIntroduction:

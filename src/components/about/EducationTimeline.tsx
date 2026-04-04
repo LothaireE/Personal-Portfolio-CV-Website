@@ -1,13 +1,15 @@
 import { motion } from "framer-motion"
-import { profile } from "@/data/profile"
 import { useLanguageContext } from "@/context/appContext"
 import { fadeUp } from "@/lib/animations";
+import { EducationProps } from "@/types/types";
+
+
 
 
 const EducationTimeline = ({ 
   education
  }: { 
-  education: typeof profile.education 
+  education: EducationProps[]
 }) => {
     const { t } = useLanguageContext()
     return (

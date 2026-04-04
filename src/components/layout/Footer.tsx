@@ -1,10 +1,10 @@
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon"
-import { profile } from "@/data/profile"
-import { useLanguageContext } from "@/context/appContext"
+import { useLanguageContext, useProfileContext } from "@/context/appContext"
 
 
 function Footer() {
   const { t } = useLanguageContext()
+  const { profile } = useProfileContext()
   const year = new Date().getFullYear()
 
   return (

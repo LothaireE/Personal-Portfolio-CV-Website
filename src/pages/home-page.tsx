@@ -1,6 +1,5 @@
 
-import { profile } from "@/data/profile"
-import { useLanguageContext } from "@/context/appContext"
+import { useLanguageContext, useProfileContext } from "@/context/appContext"
 import { SeoHead } from "@/components/common/SeoHead"
 import PageTransition from "@/components/common/PageTransition"
 import HeroSection from "@/components/home/HeroSection"
@@ -10,8 +9,9 @@ import CertificationsList from "@/components/home/CertificationsList"
 
 
 export default function HomePage() {
-  const featuredExperiences = profile.experiences.slice(0, 4)
   const { t } = useLanguageContext()
+  const { profile } = useProfileContext()
+  const featuredExperiences = profile.experiences.slice(0, 4)
 
   return (
     <>

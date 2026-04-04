@@ -1,11 +1,10 @@
 import { Mail, MapPin, Phone } from "lucide-react"
 import { motion } from "framer-motion"
-import { profile } from "@/data/profile"
 import { Card, CardContent } from "@/components/ui/card"
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon"
 import { SeoHead } from "@/components/common/SeoHead"
 import  PageTransition  from "@/components/common/PageTransition"
-import { useLanguageContext } from "@/context/appContext"
+import { useLanguageContext, useProfileContext } from "@/context/appContext"
 import ContactForm, { ContactFormData } from "@/components/contact/ContactForm"
 import ContactCard from "@/components/contact/ContactCard"
 import { fadeUp } from "@/lib/animations";
@@ -13,6 +12,7 @@ import { fadeUp } from "@/lib/animations";
 
 export default function ContactPage() {
   const { t } = useLanguageContext()
+  const { profile } = useProfileContext()
 
 
   const handleFormSubmit = async (data: ContactFormData) => {

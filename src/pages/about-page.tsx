@@ -1,8 +1,7 @@
 import { motion } from "framer-motion"
-import { profile } from "@/data/profile"
 import { SeoHead } from "@/components/common/SeoHead"
 import  PageTransition  from "@/components/common/PageTransition"
-import { useLanguageContext } from "@/context/appContext"
+import { useLanguageContext, useProfileContext } from "@/context/appContext"
 import ExperienceTimeline from "@/components/about/ExperienceTimeline"
 import EducationTimeline from "@/components/about/EducationTimeline"
 import BiographySection from "@/components/about/BiographySection"
@@ -10,6 +9,7 @@ import { fadeUp } from "@/lib/animations";
 
 export default function AboutPage() {
   const { t } = useLanguageContext()
+  const { profile } = useProfileContext()
 
   return (
     <>
