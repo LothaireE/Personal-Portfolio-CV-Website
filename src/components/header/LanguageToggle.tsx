@@ -10,6 +10,7 @@ export function LanguageToggle({ isTransparent = false }: LanguageToggleProps) {
 
   return (
     <HeaderToggleButton
+      toggleBtnId="language"
       isTransparent={isTransparent}
       value={locale}
       onChange={setLocale}
