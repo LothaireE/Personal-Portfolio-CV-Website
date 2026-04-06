@@ -5,15 +5,18 @@
 Single-page portfolio and CV.  
 Minimalist, editorial design with smooth animations and responsive layout.
 
+Designed as a reusable component system
+Built as a reusable component system, designed under specific client constraints and requirements.
+
 ---
 
 ## Tech Stack
 
-- React 18 + TypeScript
-- Vite 5
+- React 19 + TypeScript 6
+- Vite 8
 - Tailwind CSS v4 + shadcn/ui
 - Framer Motion
-- React Router DOM v6
+- React Router v7
 - Lucide React
 - next-themes
 
