@@ -16,6 +16,7 @@ export function ThemeToggle({ isTransparent = false }: ThemeToggleProps) {
 
   return (
     <HeaderToggleButton
+      toggleBtnId="theme"
       isTransparent={isTransparent}
       value={currentTheme}
       onChange={setTheme}

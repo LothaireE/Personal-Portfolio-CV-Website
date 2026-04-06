@@ -1,7 +1,7 @@
-import portraitImage from "/w-portrait.png"
+import portraitImage from "/w-portrait-glasses.webp"
 
 export const profileData = {
-  name: "Jane Doe",
+  name: "Jane Renaud",
   tagline: "Engineer · Manager · Project Engineer",
   heroIntroduction:
     "Project management in the automotive industry.",

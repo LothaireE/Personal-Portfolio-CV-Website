@@ -4,9 +4,10 @@ import { AnimatePresence } from "framer-motion"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { SkipLink } from "@/components/common/SkipLink"
+import HomePage from "@/pages/home-page" // no lazy on landing page
 // import { useLanguageContext } from "./context/appContext"
 
-const HomePage = lazy(() => import("@/pages/home-page"))
+
 const AboutPage = lazy(() => import("@/pages/about-page"))
 const ContactPage = lazy(() => import("@/pages/contact-page"))
 const NotFoundPage = lazy(() => import("@/pages/not-found-page"))
