@@ -2,13 +2,13 @@ import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react";
 
 const ScrollIndicator = ({
-    textContent = "",
+    textContent,
 } : {
     textContent?: string
 }) => {
     return (
-        <div className="flex flex-col items-center gap-2 text-white/60">
-            {textContent && (
+        <div className="flex flex-col items-center gap-2 text-muted-foreground ">
+            {textContent?.length && (
                 <span className="text-xs uppercase tracking-[0.3em]">
                 {textContent}
                 </span>
