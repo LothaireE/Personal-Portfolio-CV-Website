@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import { describe, it, expect, vi } from "vitest"
-import HeroSection from "../components/home/HeroSection"
-import { ReactNode } from "react"
+import HeroSection from "../../components/home/HeroSection"
+import type { ReactNode } from "react"
 
 
 vi.mock("@/context/appContext", () => ({
