@@ -2,11 +2,11 @@
 
 ## Overview
 
-Single-page portfolio and CV.  
+Single-page portfolio and CV.
+
 Minimalist, editorial design with smooth animations and responsive layout.
 
-Designed as a reusable component system
-Built as a reusable component system, designed under specific client constraints and requirements.
+Developed as a reusable component system, designed to specific client's requirements.
 
 ---
 
